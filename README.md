@@ -36,7 +36,12 @@ source scripts/run-llama-3b.sh
 
 
 1. Run End2End training;
-**TODO:Zhuofeng, add script here**
+```bash
+bash simluation/example/run_sft_lsp.sh 1e-4 100 1280 4 6e-2
+bash simluation/example/train_full_parameters.sh 1e-4 100
+bash simluation/example/train_lora.sh 1e-4 100 8 32
+bash simluation/example/train_galore.sh 1e-4 100 256
+```
 
 2. Profile the per-iteration time;
 We conduct this experiment on the laptop GPU.
@@ -52,7 +57,10 @@ python scripts/draw_loss_code_1.3B.py --output pics/code_1.3B --rolling 20 --hou
 ```
 ### Figure 5d, Table 4
 1. Run End2End training;
-**TODO:Zhuofeng, add script here**
+```bash
+bash simluation/example/run_sft_lsp_6.7b.sh 1e-4 5e-5 100 2048 8 5e-2
+bash simluation/example/train_full_parameters_6.7b.sh 1e-4 5e-5 100
+```
 
 2. Profile the per-iteration time;
 We conduct this experiment on the workstation GPU.
