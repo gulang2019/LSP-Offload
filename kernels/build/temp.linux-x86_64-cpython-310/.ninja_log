@@ -1,0 +1,4 @@
+# ninja log v5
+0	20667	1724041814782011435	/ssd1/siyuanch/workspace/LSP-Offload/kernels/build/temp.linux-x86_64-cpython-310/fusedAdam.o	4d1e258cabc12634
+0	20782	1724041814898012545	/ssd1/siyuanch/workspace/LSP-Offload/kernels/build/temp.linux-x86_64-cpython-310/fusedAdam_cpu.o	96c0e51c789edbcd
+1	62459	1724041856574410395	/ssd1/siyuanch/workspace/LSP-Offload/kernels/build/temp.linux-x86_64-cpython-310/fusedAdam_cuda.o	781a4e02b286db2
