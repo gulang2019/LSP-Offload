@@ -36,6 +36,7 @@ source scripts/run-llama-3b.sh
 
 
 1. Run End2End training;
+You may need to adjust the batch size in the scripts to fit your GPU memory.
 ```bash
 cd simulation/example
 bash run_sft_lsp.sh 1e-4 100 1280 4 6e-2
@@ -58,6 +59,7 @@ python scripts/draw_loss_code_1.3B.py --output pics/code_1.3B --rolling 20 --hou
 ```
 ### Figure 5d, Table 4
 1. Run End2End training;
+You may need to adjust the batch size in the scripts to fit your GPU memory.
 ```bash
 cd simulation/example
 bash run_sft_lsp_6.7b.sh 1e-4 5e-5 100 2048 8 5e-2
