@@ -20,6 +20,7 @@ source scripts/run_glue.sh
 
 See evaluation losses in result/roberta-base-LSP-$task/eval_losses.csv.
 See evaluation losses of full parameter training in result/roberta-base-FullParam-$task/eval_losses.csv.
+Reference results are provided in result_ref directory with the same name for full parameter training and LSP-training.
 
 ### Figure 5a
 We conduct this experiment on the laptop GPU.
@@ -38,7 +39,9 @@ source scripts/run-llama-3b.sh
 1. Run End2End training;
 You may need to adjust the batch size in the scripts to fit your GPU memory.
 ```bash
-cd simulation/example
+cd simulation 
+export PYTHONPATH=$PWD 
+cd example
 bash run_sft_lsp.sh 1e-4 100 1280 4 6e-2
 bash train_full_parameters.sh 1e-4 100
 bash train_lora.sh 1e-4 100 8 32
@@ -61,7 +64,9 @@ python scripts/draw_loss_code_1.3B.py --output pics/code_1.3B --rolling 20 --hou
 1. Run End2End training;
 You may need to adjust the batch size in the scripts to fit your GPU memory.
 ```bash
-cd simulation/example
+cd simulation
+export PYTHONPATH=$PWD
+cd example
 bash run_sft_lsp_6.7b.sh 1e-4 5e-5 100 2048 8 5e-2
 bash train_full_parameters_6.7b.sh 1e-4 5e-5 100
 ```
